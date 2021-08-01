@@ -1,0 +1,12 @@
+{
+    "data": {
+        "created_at": "2021-02-28T14:44:27.782+08:00",
+        "id": 1,
+        "mobile": "",
+        "password": "C7F91CDA00E76D393CA065402F82FD31CEBA33F7D41339926295359DCD47D6851AF34ED4FE34A7075078C7DF2EC44F93D36FF86E5B58001CAEC8167347F1AD27",
+        "realname": "",
+        "updated_at": "2021-02-28T14:44:27.782+08:00",
+        "username": "superadmin"
+    },
+    "err_code": 0
+}

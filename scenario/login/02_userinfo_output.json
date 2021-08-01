@@ -1,0 +1,6 @@
+{
+  "err_code": "{int}|eq=0",
+  "data": {
+    "username": "{string}|eq=superadmin"
+  }
+}
