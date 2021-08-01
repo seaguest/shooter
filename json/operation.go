@@ -37,17 +37,17 @@ func Override(input, common interface{}) {
 }
 
 // replace predefined value with value from cache
-func Fill(input interface{}, cache map[string]interface{}) interface{} {
+func Fill(input interface{}, cache map[string]interface{}) {
 	switch inputData := input.(type) {
 	case []interface{}:
-		for idx, v := range inputData {
-			inputData[idx] = Fill(v, cache)
+		for _, v := range inputData {
+			Fill(v, cache)
 		}
 	case map[string]interface{}:
 		for k, v := range inputData {
 			switch reflect.TypeOf(v).Kind() {
 			case reflect.Slice, reflect.Map:
-				inputData[k] = Fill(v, cache)
+				Fill(v, cache)
 			default:
 				// do simply fill for primitive type
 				ss := strings.Split(fmt.Sprint(v), tokenSeparator)
@@ -61,5 +61,5 @@ func Fill(input interface{}, cache map[string]interface{}) interface{} {
 			}
 		}
 	}
-	return input
+	return
 }

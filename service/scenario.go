@@ -78,10 +78,8 @@ func ValidateScenario(scenario *Scenario, v *jsn.Validator) {
 
 		input.Url = scenario.Server + input.Url
 
-		filledHeaders := jsn.Fill(input.Headers, v.GetCache())
-		filledBody := jsn.Fill(input.Body, v.GetCache())
-		input.Headers = filledHeaders.(map[string]interface{})
-		input.Body = filledBody.(map[string]interface{})
+		jsn.Fill(input.Headers, v.GetCache())
+		jsn.Fill(input.Body, v.GetCache())
 
 		// create log directory
 		baseDir := filepath.Join(filepath.Dir(f), constant.LogDir)

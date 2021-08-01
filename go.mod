@@ -17,4 +17,5 @@ require (
 	github.com/valyala/fasttemplate v1.2.1 // indirect
 	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200605160147-a5ece683394c // indirect
+	gorm.io/gorm v1.21.12 // indirect
 )
